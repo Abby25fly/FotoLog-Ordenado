@@ -1,13 +1,13 @@
 // Añadir comentarios
 const app ={
   item:{
-    nombre:undefined,
-    comentario: undefined
+    name:undefined,
+    comment: undefined
   },
 
   inicio:function(){
-    app.item.nombre= $("#name");
-    app.item.comentario=$("#comment");
+    app.item.name= $("#name");
+    app.item.comment=$("#comment");
     app.keepComment();
     app.btn();
   },
@@ -17,8 +17,8 @@ const app ={
     $("#btnClean").click(app.cleanComment);
   },
   showComent:function(){
-    localStorage.setItem(app.item.nombre.val(), app.item.comentario.val());
-    $("#addComment").append( `<div><h3>${app.item.nombre.val()}</h3><p>${app.item.comentario.val()}</p></div>`);
+    localStorage.setItem(app.item.name.val(), app.item.comment.val());
+    $("#addComment").append( `<div class="textComent"><h3>${app.item.name.val()}</h3><p>${app.item.comment.val()}</p></div>`);
     app.cleanInput();
   },
   keepComment: function(){
